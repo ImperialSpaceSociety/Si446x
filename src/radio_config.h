@@ -21,7 +21,7 @@
 /*
 // Crys_freq(Hz): 32000000    Crys_tol(ppm): 20    IF_mode: 2    High_perf_Ch_Fil: 1    OSRtune: 0    Ch_Fil_Bw_AFC: 0    ANT_DIV: 0    PM_pattern: 0    
 // MOD_type: 2    Rsymb(sps): 100    Fdev(Hz): 200    RXBW(Hz): 150000    Manchester: 0    AFC_en: 0    Rsymb_error: 0.0    Chip-Version: 2    
-// RF Freq.(MHz): 434.5    API_TC: 29    fhst: 2000    inputBW: 0    BERT: 0    RAW_dout: 0    D_source: 0    Hi_pfm_div: 1    
+// RF Freq.(MHz): 434.5    API_TC: 29    fhst: 250000    inputBW: 0    BERT: 0    RAW_dout: 0    D_source: 0    Hi_pfm_div: 1    
 // 
 // # RX IF frequency is  -500000 Hz
 // # WB filter 2 (BW =  36.64 kHz);  NB-filter 2 (BW = 36.64 kHz)
@@ -50,7 +50,7 @@
 // Command:                  RF_GPIO_PIN_CFG
 // Description:              Configures the GPIO pins.
 */
-#define RF_GPIO_PIN_CFG 0x13, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+#define RF_GPIO_PIN_CFG 0x13, 0x04, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00
 
 /*
 // Set properties:           RF_GLOBAL_XO_TUNE_2
@@ -117,7 +117,7 @@
 //   PREAMBLE_PATTERN_15_8 - Configuration of the bit values describing a Non-Standard Preamble pattern.
 //   PREAMBLE_PATTERN_7_0 - Configuration of the bit values describing a Non-Standard Preamble pattern.
 */
-#define RF_PREAMBLE_TX_LENGTH_9 0x11, 0x10, 0x09, 0x00, 0x08, 0x14, 0x00, 0x0F, 0x31, 0x00, 0x00, 0x00, 0x00
+#define RF_PREAMBLE_TX_LENGTH_9 0x11, 0x10, 0x09, 0x00, 0x00, 0x14, 0x00, 0x0F, 0x11, 0x00, 0x00, 0x00, 0x00
 
 /*
 // Set properties:           RF_SYNC_CONFIG_5
@@ -132,7 +132,7 @@
 //   SYNC_BITS_15_8 - Sync word.
 //   SYNC_BITS_7_0 - Sync word.
 */
-#define RF_SYNC_CONFIG_5 0x11, 0x11, 0x05, 0x00, 0x01, 0xB4, 0x2B, 0x00, 0x00
+#define RF_SYNC_CONFIG_5 0x11, 0x11, 0x05, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00
 
 /*
 // Set properties:           RF_PKT_CRC_CONFIG_7
@@ -171,7 +171,7 @@
 //   PKT_FIELD_2_LENGTH_7_0 - Unsigned 13-bit Field 2 length value.
 //   PKT_FIELD_2_CONFIG - General data processing and packet configuration bits for Field 2.
 */
-#define RF_PKT_LEN_12 0x11, 0x12, 0x0C, 0x08, 0x00, 0x00, 0x00, 0x30, 0x30, 0x00, 0x40, 0x04, 0x00, 0x00, 0x00, 0x00
+#define RF_PKT_LEN_12 0x11, 0x12, 0x0C, 0x08, 0x00, 0x00, 0x00, 0x30, 0x30, 0x00, 0x1E, 0x04, 0x80, 0x00, 0x00, 0x00
 
 /*
 // Set properties:           RF_PKT_FIELD_2_CRC_CONFIG_12
@@ -540,7 +540,7 @@
 //   FREQ_CONTROL_W_SIZE - Set window gating period (in number of crystal reference clock cycles) for counting VCO frequency during calibration.
 //   FREQ_CONTROL_VCOCNT_RX_ADJ - Adjust target count for VCO calibration in RX mode.
 */
-#define RF_FREQ_CONTROL_INTE_8 0x11, 0x40, 0x08, 0x00, 0x35, 0x0A, 0x80, 0x00, 0x00, 0x83, 0x20, 0xFE
+#define RF_FREQ_CONTROL_INTE_8 0x11, 0x40, 0x08, 0x00, 0x35, 0x0A, 0x80, 0x00, 0x40, 0x00, 0x20, 0xFE
 
 
 // AUTOMATICALLY GENERATED CODE! 
